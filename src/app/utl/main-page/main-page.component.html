@@ -1,0 +1,24 @@
+<h1>Alumnos IEVN 1003</h1>
+
+<hr>
+
+<div class="row">
+    <div class="col">
+        <h3>Agregar Alumnos</h3>
+        <hr>
+            <ul *ngFor="let alumn of regAlum">
+                <li>{{alumn.nombre}} - {{alumn.edad}}</li>
+                <li>Leonardo -21</li>
+                <li>Diana - 21</li>
+            </ul> 
+    </div>
+    <div class="col">
+        <h3>Agregar</h3>
+        <form (ngSubmit)="agregar()">
+            <input type="text" name="nombre"  [(ngModel)]="resAlumno.nombre" placeholder="Nombre">
+            <input type="number" name="edad"  [(ngModel)]="resAlumno.edad" placeholder="Edad">
+        </form>
+        
+        <button type="submit">Agregar</button>
+    </div>
+</div>

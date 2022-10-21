@@ -7,7 +7,25 @@ import { AlumnosUtl } from '../interfaces/utl.interface';
 export class UtlService {
 
 private _alumnosUtl:AlumnosUtl[]=[
+  {
+    nombre:'Mario',
+    edad:15,
+  },
   
+  {
+    nombre:'Lucia',
+    edad:22,
+  },
+
+  {
+    nombre:'Leonardo',
+    edad:21,
+  },
+
+  {
+    nombre:'Diana',
+    edad:21,
+  }
 ]
 
   regAlum:AlumnosUtl[]=[
@@ -35,7 +53,11 @@ private _alumnosUtl:AlumnosUtl[]=[
   constructor() { }
 
   get alumnosUtl():AlumnosUtl[]{
-    return [...this.alumnosUtl];
+    return [...this._alumnosUtl];
+  }
+
+  agregarAlumno(alumno:AlumnosUtl){
+    this._alumnosUtl.push(alumno);
   }
 
   mostrarSaludo(){
